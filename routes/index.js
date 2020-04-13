@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 });
 
 //Get all posts
-router.get("./all", async function (req, res, next) {
+router.get("/all", async function (req, res, next) {
   let comments = await commentModel.getallComments();
   res.json(comments);
 });
