@@ -14,7 +14,7 @@ router.get("/all", async function (req, res, next) {
 });
 
 /* add comment */
-router.post("/", async (req, res) => {
+router.post("/addcomment", async (req, res) => {
   console.log("req body: ", req.body);
   const { user_name, comment, user_email } = req.body;
   const response = await commentModel.addComment(

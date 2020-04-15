@@ -21,8 +21,8 @@ class CommentModel {
 
   static async addComment(user_name, comment, user_email) {
     try {
-      const postComment = await db.one(
-        `INSERT INTO user_info (user_name, comment, email) 
+      const postComment = await db.result(
+        `INSERT INTO user_info (user_name, comment, user_email) 
       VALUES ($1,$2,$3)`,
         [user_name, comment, user_email]
       );
